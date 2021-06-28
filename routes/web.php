@@ -35,4 +35,15 @@ Route::prefix('admin')->middleware('auth')->group(function(){
         Route::post('store', 'App\Http\Controllers\FotosController@store')->name('fotos.store');
         Route::delete('delete', 'App\Http\Controllers\FotosController@delete')->name('fotos.delete');
     });
+
+    Route::prefix('remedios')->group(function(){
+        Route::get('/', 'App\Http\Controllers\RemediosController@index')->name('remedios.index');
+        Route::get('/create', 'App\Http\Controllers\RemediosController@create')->name('remedios.create');
+        Route::post('/store', 'App\Http\Controllers\RemediosController@store')->name('remedios.store');
+        Route::get('/{id}/edit', 'App\Http\Controllers\RemediosController@edit')->name('remedios.edit');
+        Route::put('/update', 'App\Http\Controllers\RemediosController@update')->name('remedios.update');
+        Route::get('/horarios', 'App\Http\Controllers\RemediosController@horarios')->name('remedios.horarios');
+        Route::post('/horarios-store', 'App\Http\Controllers\RemediosController@horariosStore')->name('remedios.horarios.store');
+        Route::delete('/delete-horarios', 'App\Http\Controllers\RemediosController@horariosDelete')->name('remedios.horarios.delete');
+    });
 });
