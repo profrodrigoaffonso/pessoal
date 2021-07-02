@@ -20,8 +20,8 @@
             <h5 class="my-0 mr-md-auto font-weight-normal">Financeiro - Admin</h5>
             <nav class="my-2 my-md-0 mr-md-3">
               {{-- <a class="p-2 text-dark" href="{{ route('pagamentos.index') }}">Fotos</a> --}}
-              {{-- <a class="p-2 text-dark" href="{{ route('pagamentos.exportar') }}">Exportar</a>
-              <a class="p-2 text-dark" href="{{ route('bancos.index') }}">Bancos</a>
+              <a class="p-2 text-dark" href="{{ route('remedios.horarios') }}">Horários</a>
+              {{-- <a class="p-2 text-dark" href="{{ route('bancos.index') }}">Bancos</a>
               <a class="p-2 text-dark" href="{{ route('categorias.index') }}">Categorias</a>
               <a class="p-2 text-dark" href="{{ route('forma_pagamentos.index') }}">Forma de pagamentos</a> --}}
               <a class="p-2 text-dark" href="{{ route('logout') }}">Sair</a>
