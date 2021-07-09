@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>Horárioa</h1>
+    <h1>Horários</h1>
     <form method="POST" action="{{ route('remedios.horarios.store') }}">
         @csrf
         @component('components.forms.datahora')            
@@ -16,7 +16,7 @@
             @endcomponent
         @endforeach
        
-        <button type="submit" class="btn btn-success btn-sm">Salvar <i data-feather="save"></i></button>
+        <button type="submit" class="btn btn-success btn-sm" title="Salvar"><i data-feather="save"></i></button>
     </form>
     <form id="formExcluir" action="{{ route('remedios.horarios.delete') }}" method="POST">
         @csrf

@@ -20,11 +20,6 @@
         'required'  => 'required',
     ])
     @endcomponent
-    @component('components.forms.button', [
-        'type'    => 'submit',
-        'class'   => 'btn btn-primary',
-        'label'   => 'Salvar'
-    ])        
-    @endcomponent 
+    <button class="btn btn-success btn-sm" title="Salvar"><i data-feather="save"></i></button>
   </form>
 @endsection

@@ -26,7 +26,7 @@
               {{-- <a class="p-2 text-dark" href="{{ route('bancos.index') }}">Bancos</a>
               <a class="p-2 text-dark" href="{{ route('categorias.index') }}">Categorias</a>
               <a class="p-2 text-dark" href="{{ route('forma_pagamentos.index') }}">Forma de pagamentos</a> --}}
-              <a class="p-2 text-dark" href="{{ route('logout') }}">Sair</a>
+              <a class="btn btn-danger btn-sm" href="{{ route('logout') }}" title="Sair"><i data-feather="log-out"></i></a>
             </nav>
             {{-- <a class="btn btn-outline-primary" href="#">Cadastro</a> --}}
           </div>

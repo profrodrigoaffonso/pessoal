@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Remédios</h1>
-    <p><a href="{{ route('remedios.create') }}">Novo</a></p>
+    <p><a class="btn btn-primary btn-sm" href="{{ route('remedios.create') }}"><i data-feather="plus"></i></a></p>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -14,7 +14,9 @@
             @foreach($remedios as $remedio)
             <tr>
                 <td>{{ $remedio->nome }}</td>
-                <td><a href="{{ route('remedios.edit', ['id' => $remedio->id]) }}">Editar</a></td>              
+                <td>
+                    <a class="btn btn-primary btn-sm" href="{{ route('remedios.edit', ['id' => $remedio->id]) }}"><i data-feather="edit"></i></a>
+                </td>              
             </tr>
             @endforeach            
         </tbody>
