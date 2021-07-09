@@ -15,7 +15,7 @@ class CreateHorarioRemediosTable extends Migration
     {
         Schema::create('horario_remedios', function (Blueprint $table) {
             $table->id();
-            $table->integer('remedio_id');
+            $table->foreignId('remedio_id')->constrained('remedios');
             $table->datetime('data_hora');
             $table->timestamps();
         });

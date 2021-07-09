@@ -15,12 +15,8 @@
             ])                
             @endcomponent
         @endforeach
-        @component('components.forms.button',[
-            'type' => 'submit',
-            'label' => 'Salvar',
-            'class' => 'btn btn-primary'
-        ])            
-        @endcomponent
+       
+        <button type="submit" class="btn btn-success btn-sm">Salvar <i data-feather="save"></i></button>
     </form>
     <form id="formExcluir" action="{{ route('remedios.horarios.delete') }}" method="POST">
         @csrf
@@ -31,7 +27,6 @@
         ])            
         @endcomponent
     </form>
-    <p><a href="{{ route('remedios.create') }}">Novo</a></p>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -46,13 +41,7 @@
                 <td>{{ $horario->nome }}</td>
                 <td>{{ date('d/m/Y H:i', strtotime($horario->data_hora)) }}</td>
                 <td>
-                    @component('components.forms.button',[
-                        'type'      => 'button',
-                        'class'     => 'btn btn-primary',
-                        'label'     => 'Excluir',
-                        'onclick'   => 'onclick=excluirHorario(' . $horario->id . ')'
-                    ])                        
-                    @endcomponent
+                   <button class="btn btn-danger btn-sm" onclick="excluirHorario({{ $horario->id }})"><i data-feather="delete"></i></button>
                 </td>
                 {{-- <td><a href="{{ route('remedios.edit', ['id' => $remedio->id]) }}">Editar</a></td>               --}}
             </tr>

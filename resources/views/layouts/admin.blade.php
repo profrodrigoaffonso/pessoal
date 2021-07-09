@@ -11,6 +11,7 @@
 
     <!-- Principal CSS do Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
   </head>
 
@@ -21,6 +22,7 @@
             <nav class="my-2 my-md-0 mr-md-3">
               {{-- <a class="p-2 text-dark" href="{{ route('pagamentos.index') }}">Fotos</a> --}}
               <a class="p-2 text-dark" href="{{ route('remedios.horarios') }}">Horários</a>
+              <a class="p-2 text-dark" href="{{ route('remedios.index') }}">Remédios</a>
               {{-- <a class="p-2 text-dark" href="{{ route('bancos.index') }}">Bancos</a>
               <a class="p-2 text-dark" href="{{ route('categorias.index') }}">Categorias</a>
               <a class="p-2 text-dark" href="{{ route('forma_pagamentos.index') }}">Forma de pagamentos</a> --}}
@@ -28,7 +30,12 @@
             </nav>
             {{-- <a class="btn btn-outline-primary" href="#">Cadastro</a> --}}
           </div>
+          
         @yield('content')
+        <script src="/js/feather.min.js"></script>
+          <script>
+            feather.replace()
+          </script>
     </div>
   </body>
 </html>
