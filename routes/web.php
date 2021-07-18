@@ -24,6 +24,10 @@ Route::get('/', function () {
 Route::post('/login', 'App\Http\Controllers\LoginController@authenticate')->name('login.login');
 Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');
 
+Route::get('/receber', 'App\Http\Controllers\ComandosController@receber')->name('comandos.receber');
+Route::get('/enviar_comando', 'App\Http\Controllers\ComandosController@enviarComando')->name('comandos.enviar');
+Route::post('/alterar_comando', 'App\Http\Controllers\ComandosController@alterarComando')->name('comandos.executar');
+
 Route::prefix('admin')->middleware('auth')->group(function(){
     Route::get('/', function(){
         return view('admin');
