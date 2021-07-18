@@ -9,7 +9,7 @@
         @foreach ($remedios as $remedio)
             @component('components.forms.checkbox',[
                 'name'      => 'remedio_id[]',
-                'id'        => 'remedio_id[]',
+                'id'        => 'remedio_id' . $remedio->id,
                 'label'     => $remedio->nome,
                 'value'     => $remedio->id
             ])                
