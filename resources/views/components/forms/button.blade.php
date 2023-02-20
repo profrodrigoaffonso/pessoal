@@ -1,0 +1,1 @@
+<button type="{{ $type }}" class="{{ $class }}" {{ (!empty($onclick) ? $onclick : '') }} >{{ @$label }} {{ @$icon ? '<i data-feather="' . $icon . '"></i>' : '' }}</button>
