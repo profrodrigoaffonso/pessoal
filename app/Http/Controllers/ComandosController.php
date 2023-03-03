@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Comando;
+use App\Models\ComandoAtual;
 
 class ComandosController extends Controller
 {
@@ -44,5 +45,12 @@ class ComandosController extends Controller
 
         return redirect(route('comandos.enviar'));
 
+    }
+
+    public function atual()
+    {
+        $comando = ComandoAtual::atual();
+
+        return $comando->comando;
     }
 }
