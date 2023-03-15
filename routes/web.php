@@ -39,7 +39,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
         Route::delete('delete', 'App\Http\Controllers\FotosController@delete')->name('fotos.delete');
     });
 
-    Route::prefix('remedios')->group(function(){
+    Route::prefix('remedios')->group(function(){       
+
         Route::get('/', [RemediosController::class, 'index'])->name('remedios.index');
         Route::get('/create', [RemediosController::class, 'create'])->name('remedios.create');
         Route::post('/store', [RemediosController::class, 'store'])->name('remedios.store');

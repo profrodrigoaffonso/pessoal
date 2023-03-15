@@ -53,4 +53,9 @@ class ComandosController extends Controller
 
         return $comando->comando;
     }
+
+    public function contador($contador)
+    {
+        return $contador;
+    }
 }

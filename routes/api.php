@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('atual', [ComandosController::class, 'atual']);
+Route::get('contador/{contador}', [ComandosController::class, 'contador']);
